@@ -1,0 +1,5 @@
+Room1 Livingroom A1 A2 A3 
+Room2 Bathroom A4 A5
+Room3 Kitchen A6 A7 A8 A9 A10
+Room4 Store_room A11
+Room5 Bedroom A12 A13 A14 A15

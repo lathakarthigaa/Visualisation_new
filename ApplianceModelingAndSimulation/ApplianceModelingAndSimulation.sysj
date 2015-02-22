@@ -1,0 +1,128 @@
+import householdApplianceGUI.AppliancesPower;
+import householdApplianceGUI.ApplianceGUI;
+import javax.swing.JLabel;
+reaction Fridge(:input signal onSignal, input signal offSignal,
+				output int channel appliancePowerFridge)
+{
+	int signal powerReceive;
+	{
+		while(true)
+		{
+			present(onSignal)
+			{
+				System.out.println("Fridge ON signal received");
+				emit powerReceive(300);
+			}
+			else
+			{
+				present(offSignal)
+				{
+					System.out.println("Fridge OFF signal received");
+					emit powerReceive(0);
+				}
+			}
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			await(powerReceive);
+			int power;
+			power = #powerReceive;
+			send appliancePowerFridge(power);
+		}
+	}
+}
+
+reaction Light(:input signal onSignal, input signal offSignal,
+			 output int channel appliancePowerLight)
+{
+	int signal powerReceive;
+	{
+		while(true)
+		{
+			present(onSignal)
+			{
+				System.out.println("Light ON signal received");
+				emit powerReceive(15);
+			}
+			else
+			{
+				present(offSignal)
+				{
+					System.out.println("Light OFF signal received");
+					emit powerReceive(0);
+				}
+			}
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			await(powerReceive);
+			int power;
+			power = #powerReceive;
+			send appliancePowerLight(power);
+		}
+	}
+}
+
+reaction Aggregation(:input int channel appliancePowerFridge,
+			input int channel appliancePowerLight,
+			output String signal date, output String signal time,
+			output String signal fridgePowerSignal,
+			output String signal lightPowerSignal,
+					output String signal aggregatedPowerSignal)
+{
+	int signal receivedFridgePowers, receivedLightPowers;
+	{
+		while(true)
+		{
+			receive appliancePowerFridge;
+			int appliancePowerFridgeInt = (Integer)#appliancePowerFridge;
+			System.out.println("Fridge's power:"+appliancePowerFridgeInt);
+			String appliancePowerFridgeString = ""+appliancePowerFridgeInt;
+			emit fridgePowerSignal(appliancePowerFridgeString);
+			emit receivedFridgePowers(appliancePowerFridgeInt);
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			receive appliancePowerLight;
+			int appliancePowerLightInt = (Integer)#appliancePowerLight;
+			System.out.println("Light's power:"+appliancePowerLightInt);
+			String appliancePowerLightString = ""+appliancePowerLightInt;
+			emit lightPowerSignal(appliancePowerLightString);
+			emit receivedLightPowers(appliancePowerLightInt);
+			pause;
+			
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			{await(receivedFridgePowers);}
+			||
+			{await(receivedLightPowers);}
+			int fridgePower = (Integer)#receivedFridgePowers;
+			int lightPower = (Integer)#receivedLightPowers;
+			int aggregatedPower = fridgePower + lightPower;
+			String aggregatedPowerString = ""+aggregatedPower;
+			emit aggregatedPowerSignal(aggregatedPowerString);
+			System.out.println("Emitted aggregated power:"+aggregatedPower);
+			pause;
+		}
+	}
+}
+
+FridgeCD(..)->Fridge
+LightCD(..)->Light
+AggregationCD(..)->Aggregation

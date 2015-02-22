@@ -1,0 +1,477 @@
+<?xml version="1.0"?>
+<home>
+	<room id="R1">
+		<roomname>Kitchen</roomname>
+		<appliances>
+			<appliance id="A1">
+				<appliance_name>Fridge</appliance_name>
+				<energy_rating>500</energy_rating>
+				<operating_hours>
+					<Months>					
+						<month name="January">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="February">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="March">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="April">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="May">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="June">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="July">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="August">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="September">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="October">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="November">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="December">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+					</Months>
+				</operating_hours>
+			</appliance>
+			<appliance id = "A2">
+				<appliance_name>Air Conditioner</appliance_name>				
+				<energy_rating>2500</energy_rating>
+				<operating_hours>
+					<Months>
+						<month name="January">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="February">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="March">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="April">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="May">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="June">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="July">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="August">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="September">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="October">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="November">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="December">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+					</Months>
+				</operating_hours>
+			</appliance>
+		</appliances>
+	</room>
+	<room id="R2">
+		<roomname>Living Room</roomname>
+		<appliances>
+			<appliance id="A1">
+				<appliance_name>Fridge</appliance_name>
+				<energy_rating>500</energy_rating>
+				<operating_hours>
+					<Months>					
+						<month name="January">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="February">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="March">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="April">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="May">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="June">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="July">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="August">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="September">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="October">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="November">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="December">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+					</Months>
+				</operating_hours>
+			</appliance>
+			<appliance id = "A2">
+				<appliance_name>Air Conditioner</appliance_name>				
+				<energy_rating>2500</energy_rating>
+				<operating_hours>
+					<Months>
+						<month name="January">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="February">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="March">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="April">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="May">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="June">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="July">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="August">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="September">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="October">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="November">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+						<month name="December">
+							<Monday>All</Monday>
+							<Tuesday>All</Tuesday>
+							<Wednesday>All</Wednesday>
+							<Thursday>All</Thursday>
+							<Friday>All</Friday>
+							<Saturday>All</Saturday>
+							<Sunday>All</Sunday>
+						</month>
+					</Months>
+				</operating_hours>
+			</appliance>
+		</appliances>
+	</room>
+</home>

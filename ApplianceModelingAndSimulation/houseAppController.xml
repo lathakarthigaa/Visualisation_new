@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<System>
+  <SubSystem Name="SS1" Local="true">
+      <ClockDomain Name="FridgeCD" Class="Fridge">
+		<iSignal Name="onSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44444"/>
+		<iSignal Name="offSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44445"/>
+		<oChannel Name="appliancePowerFridge" To="AggregationCD.appliancePowerFridge"/>
+	  </ClockDomain>
+      <ClockDomain Name="LightCD" Class="Light">
+		<iSignal Name="onSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44446"/>
+		<iSignal Name="offSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44447"/>
+		<oChannel Name="appliancePowerLight" To="AggregationCD.appliancePowerLight"/>
+	  </ClockDomain>
+      <ClockDomain Name="AggregationCD" Class="Aggregation">
+		<oSignal Name="date" IP="127.0.0.1" Class="systemj.signals.network.TCPSender" Port="50000"/>
+		<oSignal Name="time" IP="127.0.0.1" Class="systemj.signals.network.TCPSender" Port="50001"/>
+		<oSignal Name="fridgePowerSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPSender" Serializer="systemj.serializer.StringSerializer" Port="50002"/>
+		<oSignal Name="lightPowerSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPSender" Serializer="systemj.serializer.StringSerializer" Port="50003"/>
+		<oSignal Name="aggregatedPowerSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPSender" Serializer="systemj.serializer.StringSerializer" Port="50004"/>
+		<iChannel Name="appliancePowerFridge" From="FridgeCD.appliancePowerFridge"/>
+		<iChannel Name="appliancePowerLight" From="LightCD.appliancePowerLight"/>
+	  </ClockDomain>
+  </SubSystem>
+</System>

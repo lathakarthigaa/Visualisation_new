@@ -1,0 +1,5 @@
+A1 Television 350
+A2 RoomHeater 2500
+A3 Light 15
+A4 Light 20
+A5 Exhaust_fan 200
