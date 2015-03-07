@@ -25,7 +25,7 @@ public class Simulation {
 		//functions.calculateMonthStartDate(2, 2014);
 		//functions.powerConsumptionForWholeDay_OneAppliance(2, "A1", "18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00");
 		//Object[] values = functions.readApplianceEnergyPatternsFromFile("OperatingHours.txt");
-		functions.EnergyDataAllAppliances(2015);
+		functions.EnergyDataAllAppliances(2018, "D:/output3.txt", "D:/OperatingHours.txt");
 		//functions.YearlyEnergyData(2014, "A1", "18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00");
 		//functions.splitEnergyUsagePatterns_YearToMonth("18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00");
 		
@@ -326,12 +326,11 @@ public class Simulation {
 	 * Output: Text File with three columns (Date, Time, Appliance's power consumption for the particular month of an year)
 	 */
 	
-	public String EnergyDataAllAppliances (int year)
+	public String EnergyDataAllAppliances (int year, String outputFileName, String inputFileName)
 	{
-		String filename = "output.txt";
 		PrintWriter printWriter = null;
 		try {
-			printWriter = new PrintWriter(new FileWriter(filename, true));
+			printWriter = new PrintWriter(new FileWriter(outputFileName, true));
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -360,8 +359,10 @@ public class Simulation {
 		Calendar end = Calendar.getInstance();
 		end.setTime(calculateMonthEndDate(12, year));
 		
-		powerConsumed = functions.YearlyEnergyData(year, "A1", "ALL 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00");
-	    powerConsumed1 = functions.YearlyEnergyData(year, "A2", "15:00-20:30 17:00-20:00 18:00-21:00 18:00-21:00 14:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00;18:00-20:30 18:00-21:00 18:00-21:00 18:00-21:00 18:00-22:00 10:00-20:00 11:00-19:00");
+		ApplianceEnergyPatterns applianceEnergyPatterns = functions.readApplianceEnergyPatternsFromFile(inputFileName);
+		
+		powerConsumed = functions.YearlyEnergyData(year, applianceEnergyPatterns.getApplianceIds()[0], applianceEnergyPatterns.getEnergyUsagePatterns()[0]);
+	    powerConsumed1 = functions.YearlyEnergyData(year, applianceEnergyPatterns.getApplianceIds()[1], applianceEnergyPatterns.getEnergyUsagePatterns()[1]);
 	    
 		/*for (Date date = start.getTime(); !start.after(end); start.add(Calendar.DATE, 1), date = start.getTime()) 
 		{
@@ -381,7 +382,7 @@ public class Simulation {
 	    	printWriter.println(date.getDate()+":"+(date.getMonth()+1)+":"+(date.getYear()+1900)+" "+timeInterval[temp%1440]+" "+powerConsumed[temp]+" "+powerConsumed1[temp]+" "+(powerConsumed[temp]+powerConsumed1[temp]));
 	    }	    
 		printWriter.close();
-		return filename;
+		return outputFileName;
 	}
 	
 	/*
@@ -470,7 +471,7 @@ public class Simulation {
 	 * Input: file containing appliance Id and the operating hours (energy usage patterns)
 	 * Output: String energyUsagePatterns (12*7 items)
 	 */
-	public Object[] readApplianceEnergyPatternsFromFile(String filename)
+	public ApplianceEnergyPatterns readApplianceEnergyPatternsFromFile(String filename)
 	{
 		//filename = "OperatingHours.txt";
 		String str;
@@ -505,6 +506,6 @@ public class Simulation {
 		{
 			System.out.println(applianceIds[temp]+":"+energyUsagePatterns[temp]);
 		}
-        return new Object[]{applianceIds, energyUsagePatterns, numberOfAppliances};
+        return new ApplianceEnergyPatterns(applianceIds, energyUsagePatterns, numberOfAppliances);
 	}
 }
