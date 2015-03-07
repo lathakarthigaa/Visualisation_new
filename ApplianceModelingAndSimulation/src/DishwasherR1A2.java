@@ -1,12 +1,11 @@
 import java.util.*;
 import systemj.bootstrap.ClockDomain;
 import systemj.lib.*;
-import householdApplianceGUI.AppliancesPower;
 import householdApplianceGUI.ApplianceGUI;
 import javax.swing.JLabel;
 
-public class Light extends ClockDomain{
-	public Light(){super(); init();}
+public class DishwasherR1A2 extends ClockDomain{
+	public DishwasherR1A2(){super(); init();}
 	Vector currsigs = new Vector();
 	private boolean df = false;
 	private char [] active;
@@ -14,13 +13,13 @@ public class Light extends ClockDomain{
 	private char [] suspended;
 	public Signal onSignal = new Signal();
 	public Signal offSignal = new Signal();
-	public output_Channel appliancePowerLight_o = new output_Channel();
+	public output_Channel appliancePowerDishwasherR1A2_o = new output_Channel();
 	private Signal powerReceive_4;
 	private int power_thread_6;
-	private int tutu__2026746079;
-	private int tutu__1084666465;
-	private int tutu__2025976581;
-	private int tutu__1226302687;
+	private int tutu__566513340;
+	private int tutu__169464899;
+	private int tutu__565359093;
+	private int tutu__997978467;
 	private int S503 = 1;
 	private int S269 = 1;
 	private int S501 = 1;
@@ -28,9 +27,9 @@ public class Light extends ClockDomain{
 	private int S278 = 1;
 	private int S273 = 1;
 	
-	private int[] ends = new int[13];
-	private int[] tdone = new int[13];
-		public void thread1997120414(int [] tdone, int [] ends){
+	private int[] ends = new int[18];
+	private int[] tdone = new int[18];
+		public void thread511878996(int [] tdone, int [] ends){
           if(tdone[6] != 1){
             switch(S501){
               case 0 : 
@@ -45,9 +44,9 @@ tdone[6]=1;
                                                                         power_thread_6 = powerReceive_4.getpreval() != null ? ((Integer)(powerReceive_4.getpreval())).intValue() : 0;
                   S271=1;
 S278=0;
-if(appliancePowerLight_o.get_preempted()){
-                                        tutu__1084666465 = 0;
-                                        tutu__1084666465 = appliancePowerLight_o.get_preempted() ? appliancePowerLight_o.refresh() : 0;
+if(appliancePowerDishwasherR1A2_o.get_preempted()){
+                                        tutu__169464899 = 0;
+                                        tutu__169464899 = appliancePowerDishwasherR1A2_o.get_preempted() ? appliancePowerDishwasherR1A2_o.refresh() : 0;
                     S278=1;
 active[6]=1;
                     ends[6]=1;
@@ -55,14 +54,14 @@ tdone[6]=1;
                     }
                   else {
                     S273=0;
-if(appliancePowerLight_o.get_w_s() == appliancePowerLight_o.get_w_r()){
-                                            tutu__2026746079 = 0;
-                                            tutu__2026746079 = appliancePowerLight_o.get_w_s();
-                                            tutu__2026746079++;
-                                            appliancePowerLight_o.set_w_s(tutu__2026746079);
-                                            appliancePowerLight_o.set_value(new Integer(power_thread_6));
+if(appliancePowerDishwasherR1A2_o.get_w_s() == appliancePowerDishwasherR1A2_o.get_w_r()){
+                                            tutu__566513340 = 0;
+                                            tutu__566513340 = appliancePowerDishwasherR1A2_o.get_w_s();
+                                            tutu__566513340++;
+                                            appliancePowerDishwasherR1A2_o.set_w_s(tutu__566513340);
+                                            appliancePowerDishwasherR1A2_o.set_value(new Integer(power_thread_6));
                       S273=1;
-if(appliancePowerLight_o.get_w_s() == appliancePowerLight_o.get_w_r()){
+if(appliancePowerDishwasherR1A2_o.get_w_s() == appliancePowerDishwasherR1A2_o.get_w_r()){
                                                 ends[6]=2;
                                                 ;
                         S271=0;
@@ -92,9 +91,9 @@ tdone[6]=1;
                 case 1 : 
                 switch(S278){
                   case 0 : 
-                  if(appliancePowerLight_o.get_preempted()){
-                                        tutu__1226302687 = 0;
-                                        tutu__1226302687 = appliancePowerLight_o.get_preempted() ? appliancePowerLight_o.refresh() : 0;
+                  if(appliancePowerDishwasherR1A2_o.get_preempted()){
+                                        tutu__997978467 = 0;
+                                        tutu__997978467 = appliancePowerDishwasherR1A2_o.get_preempted() ? appliancePowerDishwasherR1A2_o.refresh() : 0;
                     S278=1;
 active[6]=1;
                     ends[6]=1;
@@ -103,14 +102,14 @@ tdone[6]=1;
                   else {
                     switch(S273){
                       case 0 : 
-                      if(appliancePowerLight_o.get_w_s() == appliancePowerLight_o.get_w_r()){
-                                                tutu__2025976581 = 0;
-                                                tutu__2025976581 = appliancePowerLight_o.get_w_s();
-                                                tutu__2025976581++;
-                                                appliancePowerLight_o.set_w_s(tutu__2025976581);
-                                                appliancePowerLight_o.set_value(new Integer(power_thread_6));
+                      if(appliancePowerDishwasherR1A2_o.get_w_s() == appliancePowerDishwasherR1A2_o.get_w_r()){
+                                                tutu__565359093 = 0;
+                                                tutu__565359093 = appliancePowerDishwasherR1A2_o.get_w_s();
+                                                tutu__565359093++;
+                                                appliancePowerDishwasherR1A2_o.set_w_s(tutu__565359093);
+                                                appliancePowerDishwasherR1A2_o.set_value(new Integer(power_thread_6));
                         S273=1;
-if(appliancePowerLight_o.get_w_s() == appliancePowerLight_o.get_w_r()){
+if(appliancePowerDishwasherR1A2_o.get_w_s() == appliancePowerDishwasherR1A2_o.get_w_r()){
                                                     ends[6]=2;
                                                     ;
                           S271=0;
@@ -131,7 +130,7 @@ tdone[6]=1;
                         }
                       break;
                       case 1 : 
-                      if(appliancePowerLight_o.get_w_s() == appliancePowerLight_o.get_w_r()){
+                      if(appliancePowerDishwasherR1A2_o.get_w_s() == appliancePowerDishwasherR1A2_o.get_w_r()){
                                                 ends[6]=2;
                                                 ;
                         S271=0;
@@ -151,9 +150,9 @@ tdone[6]=1;
                   case 1 : 
                   S278=1;
 S278=0;
-if(appliancePowerLight_o.get_preempted()){
-                                        tutu__1226302687 = 0;
-                                        tutu__1226302687 = appliancePowerLight_o.get_preempted() ? appliancePowerLight_o.refresh() : 0;
+if(appliancePowerDishwasherR1A2_o.get_preempted()){
+                                        tutu__997978467 = 0;
+                                        tutu__997978467 = appliancePowerDishwasherR1A2_o.get_preempted() ? appliancePowerDishwasherR1A2_o.refresh() : 0;
                     S278=1;
 active[6]=1;
                     ends[6]=1;
@@ -161,14 +160,14 @@ tdone[6]=1;
                     }
                   else {
                     S273=0;
-if(appliancePowerLight_o.get_w_s() == appliancePowerLight_o.get_w_r()){
-                                            tutu__2025976581 = 0;
-                                            tutu__2025976581 = appliancePowerLight_o.get_w_s();
-                                            tutu__2025976581++;
-                                            appliancePowerLight_o.set_w_s(tutu__2025976581);
-                                            appliancePowerLight_o.set_value(new Integer(power_thread_6));
+if(appliancePowerDishwasherR1A2_o.get_w_s() == appliancePowerDishwasherR1A2_o.get_w_r()){
+                                            tutu__565359093 = 0;
+                                            tutu__565359093 = appliancePowerDishwasherR1A2_o.get_w_s();
+                                            tutu__565359093++;
+                                            appliancePowerDishwasherR1A2_o.set_w_s(tutu__565359093);
+                                            appliancePowerDishwasherR1A2_o.set_value(new Integer(power_thread_6));
                       S273=1;
-if(appliancePowerLight_o.get_w_s() == appliancePowerLight_o.get_w_r()){
+if(appliancePowerDishwasherR1A2_o.get_w_s() == appliancePowerDishwasherR1A2_o.get_w_r()){
                                                 ends[6]=2;
                                                 ;
                         S271=0;
@@ -196,7 +195,7 @@ tdone[6]=1;
               }
             }
           }
-public void thread1985962696(int [] tdone, int [] ends){
+public void thread509185754(int [] tdone, int [] ends){
           if(tdone[5] != 1){
             switch(S269){
               case 0 : 
@@ -206,10 +205,10 @@ tdone[5]=1;
               break;
               case 1 : 
               if(onSignal.getprestatus()){
-                                System.out.println("Light ON signal received");
+                                System.out.println("Dishwasher ON signal received");
                                 powerReceive_4.setPresent();
                 currsigs.addElement(powerReceive_4);
-                powerReceive_4.setValue(new Integer(15));
+                powerReceive_4.setValue(new Integer(500));
                 System.out.println("Emitted powerReceive_4");
 active[5]=1;
                 ends[5]=1;
@@ -217,7 +216,7 @@ tdone[5]=1;
                 }
               else {
                 if(offSignal.getprestatus()){
-                                    System.out.println("Light OFF signal received");
+                                    System.out.println("Dishwasher OFF signal received");
                                     powerReceive_4.setPresent();
                   currsigs.addElement(powerReceive_4);
                   powerReceive_4.setValue(new Integer(0));
@@ -236,7 +235,7 @@ tdone[5]=1;
               }
             }
           }
-public void thread1988271189(int [] tdone, int [] ends){
+public void thread509955251(int [] tdone, int [] ends){
           if(tdone[6] != 1){
             S501=1;
 S271=0;
@@ -245,14 +244,14 @@ active[6]=1;
 tdone[6]=1;
             }
           }
-public void thread1990964431(int [] tdone, int [] ends){
+public void thread518034978(int [] tdone, int [] ends){
           if(tdone[5] != 1){
             S269=1;
 if(onSignal.getprestatus()){
-                            System.out.println("Light ON signal received");
+                            System.out.println("Dishwasher ON signal received");
                             powerReceive_4.setPresent();
               currsigs.addElement(powerReceive_4);
-              powerReceive_4.setValue(new Integer(15));
+              powerReceive_4.setValue(new Integer(500));
               System.out.println("Emitted powerReceive_4");
 active[5]=1;
               ends[5]=1;
@@ -260,7 +259,7 @@ tdone[5]=1;
               }
             else {
               if(offSignal.getprestatus()){
-                                System.out.println("Light OFF signal received");
+                                System.out.println("Dishwasher OFF signal received");
                                 powerReceive_4.setPresent();
                 currsigs.addElement(powerReceive_4);
                 powerReceive_4.setValue(new Integer(0));
@@ -290,38 +289,38 @@ RUN: while(true){
                     case 1 : 
           S503=2;
           powerReceive_4.setClear();
-          thread1990964431(tdone,ends);
-          thread1988271189(tdone,ends);
-          int biggest1987886440 = 0;
-          if(ends[5]>=biggest1987886440){
-            biggest1987886440=ends[5];
+          thread518034978(tdone,ends);
+          thread509955251(tdone,ends);
+          int biggest508801005 = 0;
+          if(ends[5]>=biggest508801005){
+            biggest508801005=ends[5];
 }
-          if(ends[6]>=biggest1987886440){
-            biggest1987886440=ends[6];
+          if(ends[6]>=biggest508801005){
+            biggest508801005=ends[6];
 }
-          if(biggest1987886440 == 1){
+          if(biggest508801005 == 1){
             active[4]=1;
             ends[4]=1;
             break RUN;
             }
                     case 2 : 
                     powerReceive_4.setClear();
-          thread1985962696(tdone,ends);
-          thread1997120414(tdone,ends);
-          int biggest1994811920 = 0;
-          if(ends[5]>=biggest1994811920){
-            biggest1994811920=ends[5];
+          thread509185754(tdone,ends);
+          thread511878996(tdone,ends);
+          int biggest526499454 = 0;
+          if(ends[5]>=biggest526499454){
+            biggest526499454=ends[5];
 }
-          if(ends[6]>=biggest1994811920){
-            biggest1994811920=ends[6];
+          if(ends[6]>=biggest526499454){
+            biggest526499454=ends[6];
 }
-          if(biggest1994811920 == 1){
+          if(biggest526499454 == 1){
             active[4]=1;
             ends[4]=1;
             break RUN;
             }
           //FINXME code
-if(biggest1994811920 == 0){
+if(biggest526499454 == 0){
             S503=0;
 active[4]=0;
             ends[4]=0;
@@ -332,9 +331,9 @@ S503=0;
         			}
 		}
 	public void init(){
-		char [] active1 = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
-		char [] paused1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-		char [] suspended1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+		char [] active1 = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+		char [] paused1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+		char [] suspended1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 		paused = paused1;
 		active = active1;
 		suspended = suspended1;
@@ -352,9 +351,9 @@ S503=0;
 			}
 			if(paused[4]!=0 || suspended[4]!=0 || active[4]!=1);
 			else{
-				appliancePowerLight_o.update_w_r();
+				appliancePowerDishwasherR1A2_o.update_w_r();
 				if(!df){
-					appliancePowerLight_o.gethook();
+					appliancePowerDishwasherR1A2_o.gethook();
 					onSignal.gethook();
 					offSignal.gethook();
 					df = true;
@@ -377,10 +376,10 @@ S503=0;
 			offSignal.setpreval(offSignal.getValue());
 			offSignal.setClear();
 			powerReceive_4.setClear();
-			appliancePowerLight_o.sethook();
+			appliancePowerDishwasherR1A2_o.sethook();
 			if(paused[4]!=0 || suspended[4]!=0 || active[4]!=1);
 			else{
-				appliancePowerLight_o.gethook();
+				appliancePowerDishwasherR1A2_o.gethook();
 				onSignal.gethook();
 				offSignal.gethook();
 			}

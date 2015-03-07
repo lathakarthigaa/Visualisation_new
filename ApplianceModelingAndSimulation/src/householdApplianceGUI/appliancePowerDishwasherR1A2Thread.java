@@ -1,5 +1,4 @@
 package householdApplianceGUI;
-//package householdApplianceGUI;
 import java.io.EOFException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,42 +10,43 @@ import java.net.UnknownHostException;
 import javax.swing.JLabel;
 
 
-public class appliancePowerLightThread extends Thread
+public class appliancePowerDishwasherR1A2Thread extends Thread
 {
-	private int lightPower = 0;
-	public appliancePowerLightThread()
-	{	
+	private int dishwasherR1A2Power = 0;
+	public appliancePowerDishwasherR1A2Thread()
+	{
 	}
-	public int getLightPower() {
-		return lightPower;
+	public int getDishwasherR1A1Power() {
+		return dishwasherR1A2Power;
 	}
 	@Override
-	public void run(){
+	public void run()
+	{
 		while(true){
 			Socket socket = null;
-			try 
-			{
+			try {
 				ServerSocket ss = new ServerSocket(50003, 50, InetAddress.getByName("127.0.0.1"));
 				socket = ss.accept();
-				System.out.println("Entered AppliancePowerLightThread :-)");	
-				InputStream in = socket.getInputStream();	
-				byte[] array = new byte[150]; 
+				System.out.println("Entered AppliancePowerDishwasherR1A2Thread :-)");	
+				InputStream in = socket.getInputStream();
+				byte[] array = new byte[150];
 				try
 				{
 					while(in.read(array)>=0){;}
 					String msg = new String(array);
-					lightPower = Integer.parseInt(msg.trim());
-					System.out.println("appliancePowerLightThread::::: Light Power:"+lightPower);
+					dishwasherR1A2Power = Integer.parseInt(msg.trim());
+					System.out.println("appliancePowerDishwasherR1A2Thread::::: dishwasher R1A2 Power:"+dishwasherR1A2Power);
 				}
 				catch(EOFException e)
 				{
 					e.printStackTrace();
-				}				
+				}
+				
 				in.close();
 				socket.close();
-				ss.close();								
-			} 
-			catch (UnknownHostException e) {
+				ss.close();
+								
+			} catch (UnknownHostException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} catch (IOException e) {
@@ -54,6 +54,5 @@ public class appliancePowerLightThread extends Thread
 				e.printStackTrace();
 			}
 		}
-		
 	}
 }

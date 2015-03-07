@@ -10,14 +10,14 @@ import java.net.UnknownHostException;
 import javax.swing.JLabel;
 
 
-public class appliancePowerFridgeThread extends Thread
+public class appliancePowerFridgeR1A1Thread extends Thread
 {
-	private int fridgePower = 0;
-	public appliancePowerFridgeThread()
+	private int fridgeR1A1Power = 0;
+	public appliancePowerFridgeR1A1Thread()
 	{
 	}
-	public int getFridgePower() {
-		return fridgePower;
+	public int getFridgeR1A1Power() {
+		return fridgeR1A1Power;
 	}
 	@Override
 	public void run()
@@ -27,15 +27,15 @@ public class appliancePowerFridgeThread extends Thread
 			try {
 				ServerSocket ss = new ServerSocket(50002, 50, InetAddress.getByName("127.0.0.1"));
 				socket = ss.accept();
-				System.out.println("Entered AppliancePowerFridgeThread :-)");	
+				System.out.println("Entered AppliancePowerFridgeR1A1Thread :-)");	
 				InputStream in = socket.getInputStream();
 				byte[] array = new byte[150];
 				try
 				{
 					while(in.read(array)>=0){;}
 					String msg = new String(array);
-					fridgePower = Integer.parseInt(msg.trim());
-					System.out.println("appliancePowerFridgeThread::::: fridge Power:"+fridgePower);
+					fridgeR1A1Power = Integer.parseInt(msg.trim());
+					System.out.println("appliancePowerFridgeThread::::: fridgeR1A1 Power:"+fridgeR1A1Power);
 				}
 				catch(EOFException e)
 				{

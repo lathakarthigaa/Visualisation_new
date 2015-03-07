@@ -27,36 +27,13 @@ import javax.swing.JPanel;
 public class ApplianceGUI extends JFrame implements ActionListener 
 {
 	private Timer timer = null;
-	private appliancePowerFridgeThread fridgethread = null;
-	private appliancePowerLightThread lightthread = null;
+	private appliancePowerFridgeR1A1Thread fridgethread = null;
+	private appliancePowerLightR3A10Thread lightthread = null;
 	private aggregatedPowerThread aggregatedthread = null;
 	ImageIcon pic1, pic2, pic3, pic4 = null;
 	JButton b1, b2, b3, b4 = null;
 	JLabel iconLabel1, iconLabel2, iconLabel3, iconLabel4 = null;
 	JLabel fridgePowerLabel, lightPowerLabel, aggregatedPowerLabel = null;
-	public JLabel getFridgePowerLabel() {
-		return fridgePowerLabel;
-	}
-
-	public void setFridgePowerLabel(JLabel fridgePowerLabel) {
-		this.fridgePowerLabel = fridgePowerLabel;
-	}
-
-	public JLabel getLightPowerLabel() {
-		return lightPowerLabel;
-	}
-
-	public void setLightPowerLabel(JLabel lightPowerLabel) {
-		this.lightPowerLabel = lightPowerLabel;
-	}
-
-	public JLabel getAggregatedPowerLabel() {
-		return aggregatedPowerLabel;
-	}
-
-	public void setAggregatedPowerLabel(JLabel aggregatedPowerLabel) {
-		this.aggregatedPowerLabel = aggregatedPowerLabel;
-	}
 		
 	public ApplianceGUI(){
 		
@@ -81,9 +58,9 @@ public class ApplianceGUI extends JFrame implements ActionListener
 		timer = new Timer();
 		applianceTimerTask tt = new applianceTimerTask();
 		timer.schedule(tt, 0, 500);
-		fridgethread = new appliancePowerFridgeThread();
+		fridgethread = new appliancePowerFridgeR1A1Thread();
 		System.out.println("Fridge Thread created");	
-		lightthread = new appliancePowerLightThread();
+		lightthread = new appliancePowerLightR3A10Thread();
 		System.out.println("Light Thread created");	
 		aggregatedthread = new aggregatedPowerThread();
 		System.out.println("Agg Thread created");	
