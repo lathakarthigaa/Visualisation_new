@@ -10,10 +10,10 @@ import java.net.UnknownHostException;
 import javax.swing.JLabel;
 
 
-public class appliancePowerFridgeR1A1Thread extends Thread
+public class AppliancePowerFridgeR1A1Thread extends Thread
 {
 	private int fridgeR1A1Power = 0;
-	public appliancePowerFridgeR1A1Thread()
+	public AppliancePowerFridgeR1A1Thread()
 	{
 	}
 	public int getFridgeR1A1Power() {

@@ -1,8 +1,6 @@
 import java.util.*;
 import systemj.bootstrap.ClockDomain;
 import systemj.lib.*;
-import householdApplianceGUI.ApplianceGUI;
-import javax.swing.JLabel;
 
 public class DishwasherR1A2 extends ClockDomain{
 	public DishwasherR1A2(){super(); init();}
@@ -16,10 +14,10 @@ public class DishwasherR1A2 extends ClockDomain{
 	public output_Channel appliancePowerDishwasherR1A2_o = new output_Channel();
 	private Signal powerReceive_4;
 	private int power_thread_6;
-	private int tutu__566513340;
-	private int tutu__169464899;
-	private int tutu__565359093;
-	private int tutu__997978467;
+	private int tutu__1414490733;
+	private int tutu__282007909;
+	private int tutu__1413721235;
+	private int tutu__1701990236;
 	private int S503 = 1;
 	private int S269 = 1;
 	private int S501 = 1;
@@ -27,9 +25,9 @@ public class DishwasherR1A2 extends ClockDomain{
 	private int S278 = 1;
 	private int S273 = 1;
 	
-	private int[] ends = new int[18];
-	private int[] tdone = new int[18];
-		public void thread511878996(int [] tdone, int [] ends){
+	private int[] ends = new int[73];
+	private int[] tdone = new int[73];
+		public void thread1265977658(int [] tdone, int [] ends){
           if(tdone[6] != 1){
             switch(S501){
               case 0 : 
@@ -45,8 +43,8 @@ tdone[6]=1;
                   S271=1;
 S278=0;
 if(appliancePowerDishwasherR1A2_o.get_preempted()){
-                                        tutu__169464899 = 0;
-                                        tutu__169464899 = appliancePowerDishwasherR1A2_o.get_preempted() ? appliancePowerDishwasherR1A2_o.refresh() : 0;
+                                        tutu__282007909 = 0;
+                                        tutu__282007909 = appliancePowerDishwasherR1A2_o.get_preempted() ? appliancePowerDishwasherR1A2_o.refresh() : 0;
                     S278=1;
 active[6]=1;
                     ends[6]=1;
@@ -55,10 +53,10 @@ tdone[6]=1;
                   else {
                     S273=0;
 if(appliancePowerDishwasherR1A2_o.get_w_s() == appliancePowerDishwasherR1A2_o.get_w_r()){
-                                            tutu__566513340 = 0;
-                                            tutu__566513340 = appliancePowerDishwasherR1A2_o.get_w_s();
-                                            tutu__566513340++;
-                                            appliancePowerDishwasherR1A2_o.set_w_s(tutu__566513340);
+                                            tutu__1414490733 = 0;
+                                            tutu__1414490733 = appliancePowerDishwasherR1A2_o.get_w_s();
+                                            tutu__1414490733++;
+                                            appliancePowerDishwasherR1A2_o.set_w_s(tutu__1414490733);
                                             appliancePowerDishwasherR1A2_o.set_value(new Integer(power_thread_6));
                       S273=1;
 if(appliancePowerDishwasherR1A2_o.get_w_s() == appliancePowerDishwasherR1A2_o.get_w_r()){
@@ -92,8 +90,8 @@ tdone[6]=1;
                 switch(S278){
                   case 0 : 
                   if(appliancePowerDishwasherR1A2_o.get_preempted()){
-                                        tutu__997978467 = 0;
-                                        tutu__997978467 = appliancePowerDishwasherR1A2_o.get_preempted() ? appliancePowerDishwasherR1A2_o.refresh() : 0;
+                                        tutu__1701990236 = 0;
+                                        tutu__1701990236 = appliancePowerDishwasherR1A2_o.get_preempted() ? appliancePowerDishwasherR1A2_o.refresh() : 0;
                     S278=1;
 active[6]=1;
                     ends[6]=1;
@@ -103,10 +101,10 @@ tdone[6]=1;
                     switch(S273){
                       case 0 : 
                       if(appliancePowerDishwasherR1A2_o.get_w_s() == appliancePowerDishwasherR1A2_o.get_w_r()){
-                                                tutu__565359093 = 0;
-                                                tutu__565359093 = appliancePowerDishwasherR1A2_o.get_w_s();
-                                                tutu__565359093++;
-                                                appliancePowerDishwasherR1A2_o.set_w_s(tutu__565359093);
+                                                tutu__1413721235 = 0;
+                                                tutu__1413721235 = appliancePowerDishwasherR1A2_o.get_w_s();
+                                                tutu__1413721235++;
+                                                appliancePowerDishwasherR1A2_o.set_w_s(tutu__1413721235);
                                                 appliancePowerDishwasherR1A2_o.set_value(new Integer(power_thread_6));
                         S273=1;
 if(appliancePowerDishwasherR1A2_o.get_w_s() == appliancePowerDishwasherR1A2_o.get_w_r()){
@@ -151,8 +149,8 @@ tdone[6]=1;
                   S278=1;
 S278=0;
 if(appliancePowerDishwasherR1A2_o.get_preempted()){
-                                        tutu__997978467 = 0;
-                                        tutu__997978467 = appliancePowerDishwasherR1A2_o.get_preempted() ? appliancePowerDishwasherR1A2_o.refresh() : 0;
+                                        tutu__1701990236 = 0;
+                                        tutu__1701990236 = appliancePowerDishwasherR1A2_o.get_preempted() ? appliancePowerDishwasherR1A2_o.refresh() : 0;
                     S278=1;
 active[6]=1;
                     ends[6]=1;
@@ -161,10 +159,10 @@ tdone[6]=1;
                   else {
                     S273=0;
 if(appliancePowerDishwasherR1A2_o.get_w_s() == appliancePowerDishwasherR1A2_o.get_w_r()){
-                                            tutu__565359093 = 0;
-                                            tutu__565359093 = appliancePowerDishwasherR1A2_o.get_w_s();
-                                            tutu__565359093++;
-                                            appliancePowerDishwasherR1A2_o.set_w_s(tutu__565359093);
+                                            tutu__1413721235 = 0;
+                                            tutu__1413721235 = appliancePowerDishwasherR1A2_o.get_w_s();
+                                            tutu__1413721235++;
+                                            appliancePowerDishwasherR1A2_o.set_w_s(tutu__1413721235);
                                             appliancePowerDishwasherR1A2_o.set_value(new Integer(power_thread_6));
                       S273=1;
 if(appliancePowerDishwasherR1A2_o.get_w_s() == appliancePowerDishwasherR1A2_o.get_w_r()){
@@ -195,7 +193,7 @@ tdone[6]=1;
               }
             }
           }
-public void thread509185754(int [] tdone, int [] ends){
+public void thread1270209896(int [] tdone, int [] ends){
           if(tdone[5] != 1){
             switch(S269){
               case 0 : 
@@ -235,7 +233,7 @@ tdone[5]=1;
               }
             }
           }
-public void thread509955251(int [] tdone, int [] ends){
+public void thread1269440398(int [] tdone, int [] ends){
           if(tdone[6] != 1){
             S501=1;
 S271=0;
@@ -244,7 +242,7 @@ active[6]=1;
 tdone[6]=1;
             }
           }
-public void thread518034978(int [] tdone, int [] ends){
+public void thread1259821675(int [] tdone, int [] ends){
           if(tdone[5] != 1){
             S269=1;
 if(onSignal.getprestatus()){
@@ -289,38 +287,38 @@ RUN: while(true){
                     case 1 : 
           S503=2;
           powerReceive_4.setClear();
-          thread518034978(tdone,ends);
-          thread509955251(tdone,ends);
-          int biggest508801005 = 0;
-          if(ends[5]>=biggest508801005){
-            biggest508801005=ends[5];
+          thread1259821675(tdone,ends);
+          thread1269440398(tdone,ends);
+          int biggest1269055649 = 0;
+          if(ends[5]>=biggest1269055649){
+            biggest1269055649=ends[5];
 }
-          if(ends[6]>=biggest508801005){
-            biggest508801005=ends[6];
+          if(ends[6]>=biggest1269055649){
+            biggest1269055649=ends[6];
 }
-          if(biggest508801005 == 1){
+          if(biggest1269055649 == 1){
             active[4]=1;
             ends[4]=1;
             break RUN;
             }
                     case 2 : 
                     powerReceive_4.setClear();
-          thread509185754(tdone,ends);
-          thread511878996(tdone,ends);
-          int biggest526499454 = 0;
-          if(ends[5]>=biggest526499454){
-            biggest526499454=ends[5];
+          thread1270209896(tdone,ends);
+          thread1265977658(tdone,ends);
+          int biggest1266747156 = 0;
+          if(ends[5]>=biggest1266747156){
+            biggest1266747156=ends[5];
 }
-          if(ends[6]>=biggest526499454){
-            biggest526499454=ends[6];
+          if(ends[6]>=biggest1266747156){
+            biggest1266747156=ends[6];
 }
-          if(biggest526499454 == 1){
+          if(biggest1266747156 == 1){
             active[4]=1;
             ends[4]=1;
             break RUN;
             }
           //FINXME code
-if(biggest526499454 == 0){
+if(biggest1266747156 == 0){
             S503=0;
 active[4]=0;
             ends[4]=0;
@@ -331,9 +329,9 @@ S503=0;
         			}
 		}
 	public void init(){
-		char [] active1 = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
-		char [] paused1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-		char [] suspended1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+		char [] active1 = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+		char [] paused1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+		char [] suspended1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 		paused = paused1;
 		active = active1;
 		suspended = suspended1;

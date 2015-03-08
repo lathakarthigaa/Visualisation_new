@@ -10,10 +10,10 @@ import java.net.UnknownHostException;
 import javax.swing.JLabel;
 
 
-public class appliancePowerDishwasherR1A2Thread extends Thread
+public class AppliancePowerDishwasherR1A2Thread extends Thread
 {
 	private int dishwasherR1A2Power = 0;
-	public appliancePowerDishwasherR1A2Thread()
+	public AppliancePowerDishwasherR1A2Thread()
 	{
 	}
 	public int getDishwasherR1A1Power() {

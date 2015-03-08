@@ -11,21 +11,98 @@
 		<iSignal Name="offSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44447"/>
 		<oChannel Name="appliancePowerDishwasherR1A2" To="AggregationCD.appliancePowerDishwasherR1A2"/>
 	  </ClockDomain>
+      <ClockDomain Name="DryerR1A3CD" Class="DryerR1A3">
+		<iSignal Name="onSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44448"/>
+		<iSignal Name="offSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44449"/>
+		<oChannel Name="appliancePowerDryerR1A3" To="AggregationCD.appliancePowerDryerR1A3"/>
+	  </ClockDomain>
+      <ClockDomain Name="StoveR1A4CD" Class="StoveR1A4">
+		<iSignal Name="onSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44450"/>
+		<iSignal Name="offSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44451"/>
+		<oChannel Name="appliancePowerStoveR1A4" To="AggregationCD.appliancePowerStoveR1A4"/>
+	  </ClockDomain>
+      <ClockDomain Name="OvenR1A5CD" Class="OvenR1A5">
+		<iSignal Name="onSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44452"/>
+		<iSignal Name="offSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44453"/>
+		<oChannel Name="appliancePowerOvenR1A5" To="AggregationCD.appliancePowerOvenR1A5"/>
+	  </ClockDomain>
+      <ClockDomain Name="TVR2A6CD" Class="TVR2A6">
+		<iSignal Name="onSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44454"/>
+		<iSignal Name="offSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44455"/>
+		<oChannel Name="appliancePowerTVR2A6" To="AggregationCD.appliancePowerTVR2A6"/>
+	  </ClockDomain>
+      <ClockDomain Name="PowerPlugsR2A7CD" Class="PowerPlugsR2A7">
+		<iSignal Name="onSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44456"/>
+		<iSignal Name="offSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44457"/>
+		<oChannel Name="appliancePowerPowerPlugsR2A7" To="AggregationCD.appliancePowerPowerPlugsR2A7"/>
+	  </ClockDomain>
+      <ClockDomain Name="HeaterR2A8CD" Class="HeaterR2A8">
+		<iSignal Name="onSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44458"/>
+		<iSignal Name="offSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44459"/>
+		<oChannel Name="appliancePowerHeaterR2A8" To="AggregationCD.appliancePowerHeaterR2A8"/>
+	  </ClockDomain>
+      <ClockDomain Name="HeaterR3A9CD" Class="HeaterR3A9">
+		<iSignal Name="onSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44460"/>
+		<iSignal Name="offSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44461"/>
+		<oChannel Name="appliancePowerHeaterR3A9" To="AggregationCD.appliancePowerHeaterR3A9"/>
+	  </ClockDomain>
       <ClockDomain Name="LightR3A10CD" Class="LightR3A10">
 		<iSignal Name="onSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44462"/>
 		<iSignal Name="offSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44463"/>
 		<oChannel Name="appliancePowerLightR3A10" To="AggregationCD.appliancePowerLightR3A10"/>
 	  </ClockDomain>
+      <ClockDomain Name="PowerPlugsR3A11CD" Class="PowerPlugsR3A11">
+		<iSignal Name="onSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44464"/>
+		<iSignal Name="offSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44465"/>
+		<oChannel Name="appliancePowerPowerPlugsR3A11" To="AggregationCD.appliancePowerPowerPlugsR3A11"/>
+	  </ClockDomain>
+      <ClockDomain Name="LightR4A12CD" Class="LightR4A12">
+		<iSignal Name="onSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44466"/>
+		<iSignal Name="offSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44467"/>
+		<oChannel Name="appliancePowerLightR4A12" To="AggregationCD.appliancePowerLightR4A12"/>
+	  </ClockDomain>
+      <ClockDomain Name="FanR4A13CD" Class="FanR4A13">
+		<iSignal Name="onSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44468"/>
+		<iSignal Name="offSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44469"/>
+		<oChannel Name="appliancePowerFanR4A13" To="AggregationCD.appliancePowerFanR4A13"/>
+	  </ClockDomain>
+      <ClockDomain Name="WaterHeaterR4A14CD" Class="WaterHeaterR4A14">
+		<iSignal Name="onSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44470"/>
+		<iSignal Name="offSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPReciever" Port="44471"/>
+		<oChannel Name="appliancePowerWaterHeaterR4A14" To="AggregationCD.appliancePowerWaterHeaterR4A14"/>
+	  </ClockDomain>
       <ClockDomain Name="AggregationCD" Class="Aggregation">
 		<oSignal Name="date" IP="127.0.0.1" Class="systemj.signals.network.TCPSender" Port="50000"/>
 		<oSignal Name="time" IP="127.0.0.1" Class="systemj.signals.network.TCPSender" Port="50001"/>
 		<oSignal Name="fridgeR1A1PowerSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPSender" Serializer="systemj.serializer.StringSerializer" Port="50002"/>
-		<oSignal Name="lightR3A10PowerSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPSender" Serializer="systemj.serializer.StringSerializer" Port="50011"/>
 		<oSignal Name="dishwasherR1A2PowerSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPSender" Serializer="systemj.serializer.StringSerializer" Port="50003"/>
+		<oSignal Name="dryerR1A3PowerSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPSender" Serializer="systemj.serializer.StringSerializer" Port="50004"/>
+		<oSignal Name="stoveR1A4PowerSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPSender" Serializer="systemj.serializer.StringSerializer" Port="50005"/>
+		<oSignal Name="ovenR1A5PowerSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPSender" Serializer="systemj.serializer.StringSerializer" Port="50006"/>
+		<oSignal Name="TVR2A6PowerSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPSender" Serializer="systemj.serializer.StringSerializer" Port="50007"/>
+		<oSignal Name="powerplugsR2A7PowerSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPSender" Serializer="systemj.serializer.StringSerializer" Port="50008"/>
+		<oSignal Name="heaterR2A8PowerSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPSender" Serializer="systemj.serializer.StringSerializer" Port="50009"/>
+		<oSignal Name="heaterR3A9PowerSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPSender" Serializer="systemj.serializer.StringSerializer" Port="50010"/>
+		<oSignal Name="lightR3A10PowerSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPSender" Serializer="systemj.serializer.StringSerializer" Port="50011"/>
+		<oSignal Name="powerplugsR3A11PowerSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPSender" Serializer="systemj.serializer.StringSerializer" Port="50012"/>
+		<oSignal Name="lightR4A12PowerSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPSender" Serializer="systemj.serializer.StringSerializer" Port="50013"/>
+		<oSignal Name="fanR4A13PowerSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPSender" Serializer="systemj.serializer.StringSerializer" Port="50014"/>
+		<oSignal Name="waterHeaterR4A14PowerSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPSender" Serializer="systemj.serializer.StringSerializer" Port="50015"/>
 		<oSignal Name="aggregatedPowerSignal" IP="127.0.0.1" Class="systemj.signals.network.TCPSender" Serializer="systemj.serializer.StringSerializer" Port="50016"/>
 		<iChannel Name="appliancePowerFridgeR1A1" From="FridgeR1A1CD.appliancePowerFridgeR1A1"/>
-		<iChannel Name="appliancePowerLightR3A10" From="LightR3A10CD.appliancePowerLightR3A10"/>
 		<iChannel Name="appliancePowerDishwasherR1A2" From="DishwasherR1A2CD.appliancePowerDishwasherR1A2"/>
+		<iChannel Name="appliancePowerDryerR1A3" From="DryerR1A3CD.appliancePowerDryerR1A3"/>
+		<iChannel Name="appliancePowerStoveR1A4" From="StoveR1A4CD.appliancePowerStoveR1A4"/>
+		<iChannel Name="appliancePowerOvenR1A5" From="OvenR1A5CD.appliancePowerOvenR1A5"/>
+		<iChannel Name="appliancePowerTVR2A6" From="TVR2A6CD.appliancePowerTVR2A6"/>
+		<iChannel Name="appliancePowerPowerPlugsR2A7" From="PowerPlugsR2A7CD.appliancePowerPowerPlugsR2A7"/>
+		<iChannel Name="appliancePowerHeaterR2A8" From="HeaterR2A8CD.appliancePowerHeaterR2A8"/>
+		<iChannel Name="appliancePowerHeaterR3A9" From="HeaterR3A9CD.appliancePowerHeaterR3A9"/>
+		<iChannel Name="appliancePowerLightR3A10" From="LightR3A10CD.appliancePowerLightR3A10"/>
+		<iChannel Name="appliancePowerPowerPlugsR3A11" From="PowerPlugsR3A11CD.appliancePowerPowerPlugsR3A11"/>
+		<iChannel Name="appliancePowerLightR4A12" From="LightR4A12CD.appliancePowerLightR4A12"/>
+		<iChannel Name="appliancePowerFanR4A13" From="FanR4A13CD.appliancePowerFanR4A13"/>
+		<iChannel Name="appliancePowerWaterHeaterR4A14" From="WaterHeaterR4A14CD.appliancePowerWaterHeaterR4A14"/>
 	  </ClockDomain>
   </SubSystem>
 </System>

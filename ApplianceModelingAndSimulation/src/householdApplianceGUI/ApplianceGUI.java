@@ -27,8 +27,8 @@ import javax.swing.JPanel;
 public class ApplianceGUI extends JFrame implements ActionListener 
 {
 	private Timer timer = null;
-	private appliancePowerFridgeR1A1Thread fridgethread = null;
-	private appliancePowerLightR3A10Thread lightthread = null;
+	private AppliancePowerFridgeR1A1Thread fridgethread = null;
+	private AppliancePowerLightR3A10Thread lightthread = null;
 	private aggregatedPowerThread aggregatedthread = null;
 	ImageIcon pic1, pic2, pic3, pic4 = null;
 	JButton b1, b2, b3, b4 = null;
@@ -58,9 +58,9 @@ public class ApplianceGUI extends JFrame implements ActionListener
 		timer = new Timer();
 		applianceTimerTask tt = new applianceTimerTask();
 		timer.schedule(tt, 0, 500);
-		fridgethread = new appliancePowerFridgeR1A1Thread();
+		fridgethread = new AppliancePowerFridgeR1A1Thread();
 		System.out.println("Fridge Thread created");	
-		lightthread = new appliancePowerLightR3A10Thread();
+		lightthread = new AppliancePowerLightR3A10Thread();
 		System.out.println("Light Thread created");	
 		aggregatedthread = new aggregatedPowerThread();
 		System.out.println("Agg Thread created");	

@@ -1,5 +1,3 @@
-import householdApplianceGUI.ApplianceGUI;
-import javax.swing.JLabel;
 reaction FridgeR1A1(:input signal onSignal, input signal offSignal,
 				output int channel appliancePowerFridgeR1A1) //Appliance A1 is 'Fridge' and it is in Room R1 
 {
@@ -70,6 +68,251 @@ reaction DishwasherR1A2(:input signal onSignal, input signal offSignal,
 	}
 }
 
+reaction DryerR1A3(:input signal onSignal, input signal offSignal,
+		output int channel appliancePowerDryerR1A3) //Appliance A3 is 'Dryer' and it is in Room R1 
+{
+	int signal powerReceive;
+	{
+		while(true)
+		{
+			present(onSignal)
+			{
+				System.out.println("Dryer ON signal received");
+				emit powerReceive(3000);
+			}
+			else
+			{
+				present(offSignal)
+				{
+					System.out.println("Dryer OFF signal received");
+					emit powerReceive(0);
+				}
+			}
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			await(powerReceive);
+			int power;
+			power = #powerReceive;
+			send appliancePowerDryerR1A3(power);
+		}
+	}
+}
+
+reaction StoveR1A4(:input signal onSignal, input signal offSignal,
+		output int channel appliancePowerStoveR1A4) //Appliance A4 is 'stove' and it is in Room R1 
+{
+	int signal powerReceive;
+	{
+		while(true)
+		{
+			present(onSignal)
+			{
+				System.out.println("Electric Stove ON signal received");
+				emit powerReceive(1200);
+			}
+			else
+			{
+				present(offSignal)
+				{
+					System.out.println("Electric Stove OFF signal received");
+					emit powerReceive(0);
+				}
+			}
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			await(powerReceive);
+			int power;
+			power = #powerReceive;
+			send appliancePowerStoveR1A4(power);
+		}
+	}
+}
+
+reaction OvenR1A5(:input signal onSignal, input signal offSignal,
+		output int channel appliancePowerOvenR1A5) //Appliance A5 is 'oven' and it is in Room R1 
+{
+	int signal powerReceive;
+	{
+		while(true)
+		{
+			present(onSignal)
+			{
+				System.out.println("Microwave Oven ON signal received");
+				emit powerReceive(1300);
+			}
+			else
+			{
+				present(offSignal)
+				{
+					System.out.println("Microwave Oven OFF signal received");
+					emit powerReceive(0);
+				}
+			}
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			await(powerReceive);
+			int power;
+			power = #powerReceive;
+			send appliancePowerOvenR1A5(power);
+		}
+	}
+}
+
+reaction TVR2A6(:input signal onSignal, input signal offSignal,
+		output int channel appliancePowerTVR2A6) //Appliance A6 is 'TV' and it is in Room R2
+{
+	int signal powerReceive;
+	{
+		while(true)
+		{
+			present(onSignal)
+			{
+				System.out.println("TV ON signal received");
+				emit powerReceive(100);
+			}
+			else
+			{
+				present(offSignal)
+				{
+					System.out.println("TV OFF signal received");
+					emit powerReceive(0);
+				}
+			}
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			await(powerReceive);
+			int power;
+			power = #powerReceive;
+			send appliancePowerTVR2A6(power);
+		}
+	}
+}
+
+reaction PowerPlugsR2A7(:input signal onSignal, input signal offSignal,
+		output int channel appliancePowerPowerPlugsR2A7) //Appliance A7 is 'power plugs' and it is in Room R2
+{
+	int signal powerReceive;
+	{
+		while(true)
+		{
+			present(onSignal)
+			{
+				System.out.println("Power Plugs ON signal received");
+				emit powerReceive(35);
+			}
+			else
+			{
+				present(offSignal)
+				{
+					System.out.println("Power Plugs OFF signal received");
+					emit powerReceive(0);
+				}
+			}
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			await(powerReceive);
+			int power;
+			power = #powerReceive;
+			send appliancePowerPowerPlugsR2A7(power);
+		}
+	}
+}
+
+reaction HeaterR2A8(:input signal onSignal, input signal offSignal,
+		output int channel appliancePowerHeaterR2A8) //Appliance A8 is 'heater' and it is in Room R2
+{
+	int signal powerReceive;
+	{
+		while(true)
+		{
+			present(onSignal)
+			{
+				System.out.println("Heater ON signal received");
+				emit powerReceive(1800);
+			}
+			else
+			{
+				present(offSignal)
+				{
+					System.out.println("Heater OFF signal received");
+					emit powerReceive(0);
+				}
+			}
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			await(powerReceive);
+			int power;
+			power = #powerReceive;
+			send appliancePowerHeaterR2A8(power);
+		}
+	}
+}
+
+reaction HeaterR3A9(:input signal onSignal, input signal offSignal,
+		output int channel appliancePowerHeaterR3A9) //Appliance A9 is 'heater' and it is in Room R3
+{
+	int signal powerReceive;
+	{
+		while(true)
+		{
+			present(onSignal)
+			{
+				System.out.println("Heater ON signal received");
+				emit powerReceive(1500);
+			}
+			else
+			{
+				present(offSignal)
+				{
+					System.out.println("Heater OFF signal received");
+					emit powerReceive(0);
+				}
+			}
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			await(powerReceive);
+			int power;
+			power = #powerReceive;
+			send appliancePowerHeaterR3A9(power);
+		}
+	}
+}
+
 reaction LightR3A10(:input signal onSignal, input signal offSignal,
 			 output int channel appliancePowerLightR3A10)//Appliance A10 is 'Light' and it is in Room R3 
 {
@@ -105,22 +348,184 @@ reaction LightR3A10(:input signal onSignal, input signal offSignal,
 	}
 }
 
+reaction PowerPlugsR3A11(:input signal onSignal, input signal offSignal,
+		output int channel appliancePowerPowerPlugsR3A11) //Appliance A11 is 'PowerPlugs' and it is in Room R3
+{
+	int signal powerReceive;
+	{
+		while(true)
+		{
+			present(onSignal)
+			{
+				System.out.println("PowerPlugs ON signal received");
+				emit powerReceive(45);
+			}
+			else
+			{
+				present(offSignal)
+				{
+					System.out.println("PowerPlugs OFF signal received");
+					emit powerReceive(0);
+				}
+			}
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			await(powerReceive);
+			int power;
+			power = #powerReceive;
+			send appliancePowerPowerPlugsR3A11(power);
+		}
+	}
+}
+
+reaction LightR4A12(:input signal onSignal, input signal offSignal,
+		 output int channel appliancePowerLightR4A12)//Appliance A12 is 'Light' and it is in Room R4 
+{
+	int signal powerReceive;
+	{
+		while(true)
+		{
+			present(onSignal)
+			{
+				System.out.println("Light ON signal received");
+				emit powerReceive(60);
+			}
+			else
+			{
+				present(offSignal)
+				{
+					System.out.println("Light OFF signal received");
+					emit powerReceive(0);
+				}
+			}
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			await(powerReceive);
+			int power;
+			power = #powerReceive;
+			send appliancePowerLightR4A12(power);
+		}
+	}
+}
+
+reaction FanR4A13(:input signal onSignal, input signal offSignal,
+		 output int channel appliancePowerFanR4A13)//Appliance A13 is 'Exhaust Fan' and it is in Room R4 
+{
+	int signal powerReceive;
+	{
+		while(true)
+		{
+			present(onSignal)
+			{
+				System.out.println("Exhaust Fan ON signal received");
+				emit powerReceive(85);
+			}
+			else
+			{
+				present(offSignal)
+				{
+					System.out.println("Exhaust Fan OFF signal received");
+					emit powerReceive(0);
+				}
+			}
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			await(powerReceive);
+			int power;
+			power = #powerReceive;
+			send appliancePowerFanR4A13(power);
+		}
+	}
+}
+
+reaction WaterHeaterR4A14(:input signal onSignal, input signal offSignal,
+		 output int channel appliancePowerWaterHeaterR4A14)//Appliance A14 is 'Water Heater' and it is in Room R4 
+{
+	int signal powerReceive;
+	{
+		while(true)
+		{
+			present(onSignal)
+			{
+				System.out.println("Exhaust Fan ON signal received");
+				emit powerReceive(2000);
+			}
+			else
+			{
+				present(offSignal)
+				{
+					System.out.println("Exhaust Fan OFF signal received");
+					emit powerReceive(0);
+				}
+			}
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			await(powerReceive);
+			int power;
+			power = #powerReceive;
+			send appliancePowerWaterHeaterR4A14(power);
+		}
+	}
+}
+
 reaction Aggregation(:input int channel appliancePowerFridgeR1A1,
-			input int channel appliancePowerLightR3A10,
 			input int channel appliancePowerDishwasherR1A2,
+			input int channel appliancePowerDryerR1A3,
+			input int channel appliancePowerStoveR1A4,
+			input int channel appliancePowerOvenR1A5,
+			input int channel appliancePowerTVR2A6,
+			input int channel appliancePowerPowerPlugsR2A7,
+			input int channel appliancePowerHeaterR2A8,
+			input int channel appliancePowerHeaterR3A9,
+			input int channel appliancePowerLightR3A10,
+			input int channel appliancePowerPowerPlugsR3A11,
+			input int channel appliancePowerLightR4A12,
+			input int channel appliancePowerFanR4A13,
+			input int channel appliancePowerWaterHeaterR4A14,
 			output String signal date, output String signal time,
 			output String signal fridgeR1A1PowerSignal,
-			output String signal lightR3A10PowerSignal,
 			output String signal dishwasherR1A2PowerSignal,
+			output String signal dryerR1A3PowerSignal,
+			output String signal stoveR1A4PowerSignal,
+			output String signal ovenR1A5PowerSignal,
+			output String signal TVR2A6PowerSignal,
+			output String signal powerplugsR2A7PowerSignal,
+			output String signal heaterR2A8PowerSignal,
+			output String signal heaterR3A9PowerSignal,
+			output String signal lightR3A10PowerSignal,
+			output String signal powerplugsR3A11PowerSignal,
+			output String signal lightR4A12PowerSignal,
+			output String signal fanR4A13PowerSignal,
+			output String signal waterHeaterR4A14PowerSignal,
 			output String signal aggregatedPowerSignal)
 {
-	int signal receivedFridgeR1A1Powers, receivedLightR3A10Powers, receivedDishwasherR1A2Powers;
+	int signal receivedFridgeR1A1Powers, receivedDishwasherR1A2Powers, receivedDryerR1A3Powers, receivedStoveR1A4Powers, receivedOvenR1A5Powers, receivedTVR2A6Powers, receivedPowerPlugsR2A7Powers, receivedHeaterR2A8Powers, receivedHeaterR3A9Powers, receivedLightR3A10Powers, receivedPowerPlugsR3A11Powers, receivedLightR4A12Powers, receivedFanR4A13Powers, receivedWaterHeaterR4A14Powers;
 	{
 		while(true)
 		{
 			receive appliancePowerFridgeR1A1;
 			int appliancePowerFridgeR1A1Int = (Integer)#appliancePowerFridgeR1A1;
-			System.out.println("Fridge's power:"+appliancePowerFridgeR1A1Int);
+			System.out.println("FridgeR1A1's power:"+appliancePowerFridgeR1A1Int);
 			String appliancePowerFridgeR1A1String = ""+appliancePowerFridgeR1A1Int;
 			emit fridgeR1A1PowerSignal(appliancePowerFridgeR1A1String);
 			emit receivedFridgeR1A1Powers(appliancePowerFridgeR1A1Int);
@@ -131,22 +536,9 @@ reaction Aggregation(:input int channel appliancePowerFridgeR1A1,
 	{
 		while(true)
 		{
-			receive appliancePowerLightR3A10;
-			int appliancePowerLightR3A10Int = (Integer)#appliancePowerLightR3A10;
-			System.out.println("Light's power:"+appliancePowerLightR3A10Int);
-			String appliancePowerLightR3A10String = ""+appliancePowerLightR3A10Int;
-			emit lightR3A10PowerSignal(appliancePowerLightR3A10String);
-			emit receivedLightR3A10Powers(appliancePowerLightR3A10Int);
-			pause;
-		}
-	}
-	||
-	{
-		while(true)
-		{
 			receive appliancePowerDishwasherR1A2;
 			int appliancePowerDishwasherR1A2Int = (Integer)#appliancePowerDishwasherR1A2;
-			System.out.println("Dishwasher's power:"+appliancePowerDishwasherR1A2Int);
+			System.out.println("DishwasherR1A2's power:"+appliancePowerDishwasherR1A2Int);
 			String appliancePowerDishwasherR1A2String = ""+appliancePowerDishwasherR1A2Int;
 			emit dishwasherR1A2PowerSignal(appliancePowerDishwasherR1A2String);
 			emit receivedDishwasherR1A2Powers(appliancePowerDishwasherR1A2Int);
@@ -157,15 +549,205 @@ reaction Aggregation(:input int channel appliancePowerFridgeR1A1,
 	{
 		while(true)
 		{
+			receive appliancePowerDryerR1A3;
+			int appliancePowerDryerR1A3Int = (Integer)#appliancePowerDryerR1A3;
+			System.out.println("DryerR1A3's power:"+appliancePowerDryerR1A3Int);
+			String appliancePowerDryerR1A3String = ""+appliancePowerDryerR1A3Int;
+			emit dryerR1A3PowerSignal(appliancePowerDryerR1A3String);
+			emit receivedDryerR1A3Powers(appliancePowerDryerR1A3Int);
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			receive appliancePowerStoveR1A4;
+			int appliancePowerStoveR1A4Int = (Integer)#appliancePowerStoveR1A4;
+			System.out.println("StoveR1A4's power:"+appliancePowerStoveR1A4Int);
+			String appliancePowerStoveR1A4String = ""+appliancePowerStoveR1A4Int;
+			emit stoveR1A4PowerSignal(appliancePowerStoveR1A4String);
+			emit receivedStoveR1A4Powers(appliancePowerStoveR1A4Int);
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			receive appliancePowerOvenR1A5;
+			int appliancePowerOvenR1A5Int = (Integer)#appliancePowerOvenR1A5;
+			System.out.println("OvenR1A5's power:"+appliancePowerOvenR1A5Int);
+			String appliancePowerOvenR1A5String = ""+appliancePowerOvenR1A5Int;
+			emit ovenR1A5PowerSignal(appliancePowerOvenR1A5String);
+			emit receivedOvenR1A5Powers(appliancePowerOvenR1A5Int);
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			receive appliancePowerTVR2A6;
+			int appliancePowerTVR2A6Int = (Integer)#appliancePowerTVR2A6;
+			System.out.println("TVR2A6's power:"+appliancePowerTVR2A6Int);
+			String appliancePowerTVR2A6String = ""+appliancePowerTVR2A6Int;
+			emit TVR2A6PowerSignal(appliancePowerTVR2A6String);
+			emit receivedTVR2A6Powers(appliancePowerTVR2A6Int);
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			receive appliancePowerPowerPlugsR2A7;
+			int appliancePowerPowerPlugsR2A7Int = (Integer)#appliancePowerPowerPlugsR2A7;
+			System.out.println("PowerPlugsR2A7's power:"+appliancePowerPowerPlugsR2A7Int);
+			String appliancePowerPowerPlugsR2A7String = ""+appliancePowerPowerPlugsR2A7Int;
+			emit powerplugsR2A7PowerSignal(appliancePowerPowerPlugsR2A7String);
+			emit receivedPowerPlugsR2A7Powers(appliancePowerPowerPlugsR2A7Int);
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			receive appliancePowerHeaterR2A8;
+			int appliancePowerHeaterR2A8Int = (Integer)#appliancePowerHeaterR2A8;
+			System.out.println("HeaterR2A8's power:"+appliancePowerHeaterR2A8Int);
+			String appliancePowerHeaterR2A8String = ""+appliancePowerHeaterR2A8Int;
+			emit heaterR2A8PowerSignal(appliancePowerHeaterR2A8String);
+			emit receivedHeaterR2A8Powers(appliancePowerHeaterR2A8Int);
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			receive appliancePowerHeaterR3A9;
+			int appliancePowerHeaterR3A9Int = (Integer)#appliancePowerHeaterR3A9;
+			System.out.println("HeaterR3A9's power:"+appliancePowerHeaterR3A9Int);
+			String appliancePowerHeaterR3A9String = ""+appliancePowerHeaterR3A9Int;
+			emit heaterR3A9PowerSignal(appliancePowerHeaterR3A9String);
+			emit receivedHeaterR3A9Powers(appliancePowerHeaterR3A9Int);
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			receive appliancePowerLightR3A10;
+			int appliancePowerLightR3A10Int = (Integer)#appliancePowerLightR3A10;
+			System.out.println("LightR3A10's power:"+appliancePowerLightR3A10Int);
+			String appliancePowerLightR3A10String = ""+appliancePowerLightR3A10Int;
+			emit lightR3A10PowerSignal(appliancePowerLightR3A10String);
+			emit receivedLightR3A10Powers(appliancePowerLightR3A10Int);
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			receive appliancePowerPowerPlugsR3A11;
+			int appliancePowerPowerPlugsR3A11Int = (Integer)#appliancePowerPowerPlugsR3A11;
+			System.out.println("PowerPlugsR3A11's power:"+appliancePowerPowerPlugsR3A11Int);
+			String appliancePowerPowerPlugsR3A11String = ""+appliancePowerPowerPlugsR3A11Int;
+			emit powerplugsR3A11PowerSignal(appliancePowerPowerPlugsR3A11String);
+			emit receivedPowerPlugsR3A11Powers(appliancePowerPowerPlugsR3A11Int);
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			receive appliancePowerLightR4A12;
+			int appliancePowerLightR4A12Int = (Integer)#appliancePowerLightR4A12;
+			System.out.println("LightR4A12's power:"+appliancePowerLightR4A12Int);
+			String appliancePowerLightR4A12String = ""+appliancePowerLightR4A12Int;
+			emit lightR4A12PowerSignal(appliancePowerLightR4A12String);
+			emit receivedLightR4A12Powers(appliancePowerLightR4A12Int);
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			receive appliancePowerFanR4A13;
+			int appliancePowerFanR4A13Int = (Integer)#appliancePowerFanR4A13;
+			System.out.println("FanR4A13's power:"+appliancePowerFanR4A13Int);
+			String appliancePowerFanR4A13String = ""+appliancePowerFanR4A13Int;
+			emit fanR4A13PowerSignal(appliancePowerFanR4A13String);
+			emit receivedFanR4A13Powers(appliancePowerFanR4A13Int);
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+			receive appliancePowerWaterHeaterR4A14;
+			int appliancePowerWaterHeaterR4A14Int = (Integer)#appliancePowerWaterHeaterR4A14;
+			System.out.println("WaterHeaterR4A14's power:"+appliancePowerWaterHeaterR4A14Int);
+			String appliancePowerWaterHeaterR4A14String = ""+appliancePowerWaterHeaterR4A14Int;
+			emit waterHeaterR4A14PowerSignal(appliancePowerWaterHeaterR4A14String);
+			emit receivedWaterHeaterR4A14Powers(appliancePowerWaterHeaterR4A14Int);
+			pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
 			{await(receivedFridgeR1A1Powers);}
+			||
+			{await(receivedDishwasherR1A2Powers);}
+			||
+			{await(receivedDryerR1A3Powers);}
+			||
+			{await(receivedStoveR1A4Powers);}
+			||
+			{await(receivedOvenR1A5Powers);}
+			||
+			{await(receivedTVR2A6Powers);}
+			||
+			{await(receivedPowerPlugsR2A7Powers);}
+			||
+			{await(receivedHeaterR2A8Powers);}
+			||
+			{await(receivedHeaterR3A9Powers);}
 			||
 			{await(receivedLightR3A10Powers);}
 			||
-			{await(receivedDishwasherR1A2Powers);}
+			{await(receivedPowerPlugsR3A11Powers);}
+			||
+			{await(receivedLightR4A12Powers);}
+			||
+			{await(receivedFanR4A13Powers);}
+			||
+			{await(receivedWaterHeaterR4A14Powers);}
+			
 			int fridgeR1A1Power = (Integer)#receivedFridgeR1A1Powers;
-			int lightR3A10Power = (Integer)#receivedLightR3A10Powers;
 			int dishwasherR1A2Power = (Integer)#receivedDishwasherR1A2Powers;
-			int aggregatedPower = fridgeR1A1Power + lightR3A10Power + dishwasherR1A2Power;
+			int dryerR1A3Power = (Integer)#receivedDryerR1A3Powers;
+			int stoveR1A4Power = (Integer)#receivedStoveR1A4Powers;
+			int ovenR1A5Power = (Integer)#receivedOvenR1A5Powers;
+			int TVR2A6 = (Integer)#receivedTVR2A6Powers;
+			int powerplugsR2A7Power = (Integer)#receivedPowerPlugsR2A7Powers;
+			int heaterR2A8Power = (Integer)#receivedHeaterR2A8Powers;
+			int heaterR3A9Power = (Integer)#receivedHeaterR3A9Powers;
+			int lightR3A10Power = (Integer)#receivedLightR3A10Powers;
+			int powerplugsR3A11Power = (Integer)#receivedPowerPlugsR3A11Powers;
+			int lightR4A12Power = (Integer)#receivedLightR4A12Powers;
+			int fanR4A13Power = (Integer)#receivedFanR4A13Powers;
+			int waterHeaterR4A14Power = (Integer)#receivedWaterHeaterR4A14Powers;
+			int aggregatedPower = fridgeR1A1Power + dishwasherR1A2Power+ dryerR1A3Power + stoveR1A4Power + ovenR1A5Power + TVR2A6 + powerplugsR2A7Power + heaterR2A8Power + heaterR3A9Power + lightR3A10Power + powerplugsR3A11Power + lightR4A12Power + fanR4A13Power + waterHeaterR4A14Power;
 			String aggregatedPowerString = ""+aggregatedPower;
 			emit aggregatedPowerSignal(aggregatedPowerString);
 			System.out.println("Emitted aggregated power:"+aggregatedPower);
@@ -176,5 +758,16 @@ reaction Aggregation(:input int channel appliancePowerFridgeR1A1,
 
 FridgeR1A1CD(..)->FridgeR1A1
 DishwasherR1A2CD(..)->DishwasherR1A2
+DryerR1A3CD(..)->DryerR1A3
+StoveR1A4CD(..)->StoveR1A4
+OvenR1A5CD(..)->OvenR1A5
+TVR2A6CD(..)->TVR2A6
+PowerPlugsR2A7CD(..)->PowerPlugsR2A7
+HeaterR2A8CD(..)->HeaterR2A8
+HeaterR3A9CD(..)->HeaterR3A9
 LightR3A10CD(..)->LightR3A10
+PowerPlugsR3A11CD(..)->PowerPlugsR3A11
+LightR4A12CD(..)->LightR4A12
+FanR4A13CD(..)->FanR4A13
+WaterHeaterR4A14CD(..)->WaterHeaterR4A14
 AggregationCD(..)->Aggregation
