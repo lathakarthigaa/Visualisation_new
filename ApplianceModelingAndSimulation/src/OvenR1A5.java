@@ -14,10 +14,10 @@ public class OvenR1A5 extends ClockDomain{
 	public output_Channel appliancePowerOvenR1A5_o = new output_Channel();
 	private Signal powerReceive_13;
 	private int power_thread_15;
-	private int tutu__1474896311;
-	private int tutu__740444085;
-	private int tutu__1475665808;
-	private int tutu__1243554059;
+	private int tutu__225860598;
+	private int tutu__1384828763;
+	private int tutu__228553840;
+	private int tutu__1886371323;
 	private int S1259 = 1;
 	private int S1025 = 1;
 	private int S1257 = 1;
@@ -27,7 +27,7 @@ public class OvenR1A5 extends ClockDomain{
 	
 	private int[] ends = new int[73];
 	private int[] tdone = new int[73];
-		public void thread948559815(int [] tdone, int [] ends){
+		public void thread293550417(int [] tdone, int [] ends){
           if(tdone[15] != 1){
             switch(S1257){
               case 0 : 
@@ -43,8 +43,8 @@ tdone[15]=1;
                   S1027=1;
 S1034=0;
 if(appliancePowerOvenR1A5_o.get_preempted()){
-                                        tutu__740444085 = 0;
-                                        tutu__740444085 = appliancePowerOvenR1A5_o.get_preempted() ? appliancePowerOvenR1A5_o.refresh() : 0;
+                                        tutu__1384828763 = 0;
+                                        tutu__1384828763 = appliancePowerOvenR1A5_o.get_preempted() ? appliancePowerOvenR1A5_o.refresh() : 0;
                     S1034=1;
 active[15]=1;
                     ends[15]=1;
@@ -53,10 +53,10 @@ tdone[15]=1;
                   else {
                     S1029=0;
 if(appliancePowerOvenR1A5_o.get_w_s() == appliancePowerOvenR1A5_o.get_w_r()){
-                                            tutu__1474896311 = 0;
-                                            tutu__1474896311 = appliancePowerOvenR1A5_o.get_w_s();
-                                            tutu__1474896311++;
-                                            appliancePowerOvenR1A5_o.set_w_s(tutu__1474896311);
+                                            tutu__225860598 = 0;
+                                            tutu__225860598 = appliancePowerOvenR1A5_o.get_w_s();
+                                            tutu__225860598++;
+                                            appliancePowerOvenR1A5_o.set_w_s(tutu__225860598);
                                             appliancePowerOvenR1A5_o.set_value(new Integer(power_thread_15));
                       S1029=1;
 if(appliancePowerOvenR1A5_o.get_w_s() == appliancePowerOvenR1A5_o.get_w_r()){
@@ -90,8 +90,8 @@ tdone[15]=1;
                 switch(S1034){
                   case 0 : 
                   if(appliancePowerOvenR1A5_o.get_preempted()){
-                                        tutu__1243554059 = 0;
-                                        tutu__1243554059 = appliancePowerOvenR1A5_o.get_preempted() ? appliancePowerOvenR1A5_o.refresh() : 0;
+                                        tutu__1886371323 = 0;
+                                        tutu__1886371323 = appliancePowerOvenR1A5_o.get_preempted() ? appliancePowerOvenR1A5_o.refresh() : 0;
                     S1034=1;
 active[15]=1;
                     ends[15]=1;
@@ -101,10 +101,10 @@ tdone[15]=1;
                     switch(S1029){
                       case 0 : 
                       if(appliancePowerOvenR1A5_o.get_w_s() == appliancePowerOvenR1A5_o.get_w_r()){
-                                                tutu__1475665808 = 0;
-                                                tutu__1475665808 = appliancePowerOvenR1A5_o.get_w_s();
-                                                tutu__1475665808++;
-                                                appliancePowerOvenR1A5_o.set_w_s(tutu__1475665808);
+                                                tutu__228553840 = 0;
+                                                tutu__228553840 = appliancePowerOvenR1A5_o.get_w_s();
+                                                tutu__228553840++;
+                                                appliancePowerOvenR1A5_o.set_w_s(tutu__228553840);
                                                 appliancePowerOvenR1A5_o.set_value(new Integer(power_thread_15));
                         S1029=1;
 if(appliancePowerOvenR1A5_o.get_w_s() == appliancePowerOvenR1A5_o.get_w_r()){
@@ -149,8 +149,8 @@ tdone[15]=1;
                   S1034=1;
 S1034=0;
 if(appliancePowerOvenR1A5_o.get_preempted()){
-                                        tutu__1243554059 = 0;
-                                        tutu__1243554059 = appliancePowerOvenR1A5_o.get_preempted() ? appliancePowerOvenR1A5_o.refresh() : 0;
+                                        tutu__1886371323 = 0;
+                                        tutu__1886371323 = appliancePowerOvenR1A5_o.get_preempted() ? appliancePowerOvenR1A5_o.refresh() : 0;
                     S1034=1;
 active[15]=1;
                     ends[15]=1;
@@ -159,10 +159,10 @@ tdone[15]=1;
                   else {
                     S1029=0;
 if(appliancePowerOvenR1A5_o.get_w_s() == appliancePowerOvenR1A5_o.get_w_r()){
-                                            tutu__1475665808 = 0;
-                                            tutu__1475665808 = appliancePowerOvenR1A5_o.get_w_s();
-                                            tutu__1475665808++;
-                                            appliancePowerOvenR1A5_o.set_w_s(tutu__1475665808);
+                                            tutu__228553840 = 0;
+                                            tutu__228553840 = appliancePowerOvenR1A5_o.get_w_s();
+                                            tutu__228553840++;
+                                            appliancePowerOvenR1A5_o.set_w_s(tutu__228553840);
                                             appliancePowerOvenR1A5_o.set_value(new Integer(power_thread_15));
                       S1029=1;
 if(appliancePowerOvenR1A5_o.get_w_s() == appliancePowerOvenR1A5_o.get_w_r()){
@@ -193,7 +193,7 @@ tdone[15]=1;
               }
             }
           }
-public void thread938941093(int [] tdone, int [] ends){
+public void thread304708135(int [] tdone, int [] ends){
           if(tdone[14] != 1){
             switch(S1025){
               case 0 : 
@@ -206,7 +206,7 @@ tdone[14]=1;
                                 System.out.println("Microwave Oven ON signal received");
                                 powerReceive_13.setPresent();
                 currsigs.addElement(powerReceive_13);
-                powerReceive_13.setValue(new Integer(1200));
+                powerReceive_13.setValue(new Integer(1300));
                 System.out.println("Emitted powerReceive_13");
 active[14]=1;
                 ends[14]=1;
@@ -233,7 +233,7 @@ tdone[14]=1;
               }
             }
           }
-public void thread938171595(int [] tdone, int [] ends){
+public void thread302399642(int [] tdone, int [] ends){
           if(tdone[15] != 1){
             S1257=1;
 S1027=0;
@@ -242,14 +242,14 @@ active[15]=1;
 tdone[15]=1;
             }
           }
-public void thread942403833(int [] tdone, int [] ends){
+public void thread299321651(int [] tdone, int [] ends){
           if(tdone[14] != 1){
             S1025=1;
 if(onSignal.getprestatus()){
                             System.out.println("Microwave Oven ON signal received");
                             powerReceive_13.setPresent();
               currsigs.addElement(powerReceive_13);
-              powerReceive_13.setValue(new Integer(1200));
+              powerReceive_13.setValue(new Integer(1300));
               System.out.println("Emitted powerReceive_13");
 active[14]=1;
               ends[14]=1;
@@ -287,38 +287,38 @@ RUN: while(true){
                     case 1 : 
           S1259=2;
           powerReceive_13.setClear();
-          thread942403833(tdone,ends);
-          thread938171595(tdone,ends);
-          int biggest939325842 = 0;
-          if(ends[14]>=biggest939325842){
-            biggest939325842=ends[14];
+          thread299321651(tdone,ends);
+          thread302399642(tdone,ends);
+          int biggest302784391 = 0;
+          if(ends[14]>=biggest302784391){
+            biggest302784391=ends[14];
 }
-          if(ends[15]>=biggest939325842){
-            biggest939325842=ends[15];
+          if(ends[15]>=biggest302784391){
+            biggest302784391=ends[15];
 }
-          if(biggest939325842 == 1){
+          if(biggest302784391 == 1){
             active[13]=1;
             ends[13]=1;
             break RUN;
             }
                     case 2 : 
                     powerReceive_13.setClear();
-          thread938941093(tdone,ends);
-          thread948559815(tdone,ends);
-          int biggest946251322 = 0;
-          if(ends[14]>=biggest946251322){
-            biggest946251322=ends[14];
+          thread304708135(tdone,ends);
+          thread293550417(tdone,ends);
+          int biggest295858911 = 0;
+          if(ends[14]>=biggest295858911){
+            biggest295858911=ends[14];
 }
-          if(ends[15]>=biggest946251322){
-            biggest946251322=ends[15];
+          if(ends[15]>=biggest295858911){
+            biggest295858911=ends[15];
 }
-          if(biggest946251322 == 1){
+          if(biggest295858911 == 1){
             active[13]=1;
             ends[13]=1;
             break RUN;
             }
           //FINXME code
-if(biggest946251322 == 0){
+if(biggest295858911 == 0){
             S1259=0;
 active[13]=0;
             ends[13]=0;

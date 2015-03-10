@@ -14,10 +14,10 @@ public class DryerR1A3 extends ClockDomain{
 	public output_Channel appliancePowerDryerR1A3_o = new output_Channel();
 	private Signal powerReceive_7;
 	private int power_thread_9;
-	private int tutu__1499520240;
-	private int tutu__1677012915;
-	private int tutu__1498750742;
-	private int tutu__633956237;
+	private int tutu__251638774;
+	private int tutu__1276773501;
+	private int tutu__250869277;
+	private int tutu__707224643;
 	private int S755 = 1;
 	private int S521 = 1;
 	private int S753 = 1;
@@ -27,7 +27,7 @@ public class DryerR1A3 extends ClockDomain{
 	
 	private int[] ends = new int[73];
 	private int[] tdone = new int[73];
-		public void thread951637806(int [] tdone, int [] ends){
+		public void thread290087677(int [] tdone, int [] ends){
           if(tdone[9] != 1){
             switch(S753){
               case 0 : 
@@ -43,8 +43,8 @@ tdone[9]=1;
                   S523=1;
 S530=0;
 if(appliancePowerDryerR1A3_o.get_preempted()){
-                                        tutu__1677012915 = 0;
-                                        tutu__1677012915 = appliancePowerDryerR1A3_o.get_preempted() ? appliancePowerDryerR1A3_o.refresh() : 0;
+                                        tutu__1276773501 = 0;
+                                        tutu__1276773501 = appliancePowerDryerR1A3_o.get_preempted() ? appliancePowerDryerR1A3_o.refresh() : 0;
                     S530=1;
 active[9]=1;
                     ends[9]=1;
@@ -53,10 +53,10 @@ tdone[9]=1;
                   else {
                     S525=0;
 if(appliancePowerDryerR1A3_o.get_w_s() == appliancePowerDryerR1A3_o.get_w_r()){
-                                            tutu__1499520240 = 0;
-                                            tutu__1499520240 = appliancePowerDryerR1A3_o.get_w_s();
-                                            tutu__1499520240++;
-                                            appliancePowerDryerR1A3_o.set_w_s(tutu__1499520240);
+                                            tutu__251638774 = 0;
+                                            tutu__251638774 = appliancePowerDryerR1A3_o.get_w_s();
+                                            tutu__251638774++;
+                                            appliancePowerDryerR1A3_o.set_w_s(tutu__251638774);
                                             appliancePowerDryerR1A3_o.set_value(new Integer(power_thread_9));
                       S525=1;
 if(appliancePowerDryerR1A3_o.get_w_s() == appliancePowerDryerR1A3_o.get_w_r()){
@@ -90,8 +90,8 @@ tdone[9]=1;
                 switch(S530){
                   case 0 : 
                   if(appliancePowerDryerR1A3_o.get_preempted()){
-                                        tutu__633956237 = 0;
-                                        tutu__633956237 = appliancePowerDryerR1A3_o.get_preempted() ? appliancePowerDryerR1A3_o.refresh() : 0;
+                                        tutu__707224643 = 0;
+                                        tutu__707224643 = appliancePowerDryerR1A3_o.get_preempted() ? appliancePowerDryerR1A3_o.refresh() : 0;
                     S530=1;
 active[9]=1;
                     ends[9]=1;
@@ -101,10 +101,10 @@ tdone[9]=1;
                     switch(S525){
                       case 0 : 
                       if(appliancePowerDryerR1A3_o.get_w_s() == appliancePowerDryerR1A3_o.get_w_r()){
-                                                tutu__1498750742 = 0;
-                                                tutu__1498750742 = appliancePowerDryerR1A3_o.get_w_s();
-                                                tutu__1498750742++;
-                                                appliancePowerDryerR1A3_o.set_w_s(tutu__1498750742);
+                                                tutu__250869277 = 0;
+                                                tutu__250869277 = appliancePowerDryerR1A3_o.get_w_s();
+                                                tutu__250869277++;
+                                                appliancePowerDryerR1A3_o.set_w_s(tutu__250869277);
                                                 appliancePowerDryerR1A3_o.set_value(new Integer(power_thread_9));
                         S525=1;
 if(appliancePowerDryerR1A3_o.get_w_s() == appliancePowerDryerR1A3_o.get_w_r()){
@@ -149,8 +149,8 @@ tdone[9]=1;
                   S530=1;
 S530=0;
 if(appliancePowerDryerR1A3_o.get_preempted()){
-                                        tutu__633956237 = 0;
-                                        tutu__633956237 = appliancePowerDryerR1A3_o.get_preempted() ? appliancePowerDryerR1A3_o.refresh() : 0;
+                                        tutu__707224643 = 0;
+                                        tutu__707224643 = appliancePowerDryerR1A3_o.get_preempted() ? appliancePowerDryerR1A3_o.refresh() : 0;
                     S530=1;
 active[9]=1;
                     ends[9]=1;
@@ -159,10 +159,10 @@ tdone[9]=1;
                   else {
                     S525=0;
 if(appliancePowerDryerR1A3_o.get_w_s() == appliancePowerDryerR1A3_o.get_w_r()){
-                                            tutu__1498750742 = 0;
-                                            tutu__1498750742 = appliancePowerDryerR1A3_o.get_w_s();
-                                            tutu__1498750742++;
-                                            appliancePowerDryerR1A3_o.set_w_s(tutu__1498750742);
+                                            tutu__250869277 = 0;
+                                            tutu__250869277 = appliancePowerDryerR1A3_o.get_w_s();
+                                            tutu__250869277++;
+                                            appliancePowerDryerR1A3_o.set_w_s(tutu__250869277);
                                             appliancePowerDryerR1A3_o.set_value(new Integer(power_thread_9));
                       S525=1;
 if(appliancePowerDryerR1A3_o.get_w_s() == appliancePowerDryerR1A3_o.get_w_r()){
@@ -193,7 +193,7 @@ tdone[9]=1;
               }
             }
           }
-public void thread954331049(int [] tdone, int [] ends){
+public void thread287394435(int [] tdone, int [] ends){
           if(tdone[8] != 1){
             switch(S521){
               case 0 : 
@@ -233,7 +233,7 @@ tdone[8]=1;
               }
             }
           }
-public void thread953561551(int [] tdone, int [] ends){
+public void thread288163932(int [] tdone, int [] ends){
           if(tdone[9] != 1){
             S753=1;
 S523=0;
@@ -242,7 +242,7 @@ active[9]=1;
 tdone[9]=1;
             }
           }
-public void thread1265592909(int [] tdone, int [] ends){
+public void thread271619730(int [] tdone, int [] ends){
           if(tdone[8] != 1){
             S521=1;
 if(onSignal.getprestatus()){
@@ -287,38 +287,38 @@ RUN: while(true){
                     case 1 : 
           S755=2;
           powerReceive_7.setClear();
-          thread1265592909(tdone,ends);
-          thread953561551(tdone,ends);
-          int biggest954715798 = 0;
-          if(ends[8]>=biggest954715798){
-            biggest954715798=ends[8];
+          thread271619730(tdone,ends);
+          thread288163932(tdone,ends);
+          int biggest287009686 = 0;
+          if(ends[8]>=biggest287009686){
+            biggest287009686=ends[8];
 }
-          if(ends[9]>=biggest954715798){
-            biggest954715798=ends[9];
+          if(ends[9]>=biggest287009686){
+            biggest287009686=ends[9];
 }
-          if(biggest954715798 == 1){
+          if(biggest287009686 == 1){
             active[7]=1;
             ends[7]=1;
             break RUN;
             }
                     case 2 : 
                     powerReceive_7.setClear();
-          thread954331049(tdone,ends);
-          thread951637806(tdone,ends);
-          int biggest951253057 = 0;
-          if(ends[8]>=biggest951253057){
-            biggest951253057=ends[8];
+          thread287394435(tdone,ends);
+          thread290087677(tdone,ends);
+          int biggest290472426 = 0;
+          if(ends[8]>=biggest290472426){
+            biggest290472426=ends[8];
 }
-          if(ends[9]>=biggest951253057){
-            biggest951253057=ends[9];
+          if(ends[9]>=biggest290472426){
+            biggest290472426=ends[9];
 }
-          if(biggest951253057 == 1){
+          if(biggest290472426 == 1){
             active[7]=1;
             ends[7]=1;
             break RUN;
             }
           //FINXME code
-if(biggest951253057 == 0){
+if(biggest290472426 == 0){
             S755=0;
 active[7]=0;
             ends[7]=0;
